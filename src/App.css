@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: aliceblue;
+  color: midnightblue;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.home-scout {
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px 6%;
+}
+
+.page-header {
+  margin-bottom: 35px;
+}
+
+.eyebrow {
+  color: steelblue;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.page-header h1,
+.home-scout > h1 {
+  margin: 10px 0;
+  font-size: clamp(28px, 4vw, 42px);
+}
+
+.subtitle {
+  color: slategray;
+  line-height: 1.6;
+}
+
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.property-card {
+  overflow: hidden;
+  background-color: white;
+  border: 1px solid lightblue;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(30, 70, 110, 0.08);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(30, 70, 110, 0.14);
+}
+
+.property-image-container {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  background-color: lightcyan;
+}
+
+.property-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.property-card:hover .property-image {
+  transform: scale(1.04);
+}
+
+.photo-label {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background-color: white;
+  color: midnightblue;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.property-details {
+  padding: 20px;
+}
+
+.property-price {
+  margin: 0 0 10px;
+  color: steelblue;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.property-details h2 {
+  margin: 0 0 8px;
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+.property-location {
+  margin: 0;
+  color: slategray;
+  font-size: 13px;
+}
+
+.property-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid aliceblue;
+  color: slategray;
+  font-size: 13px;
+}
+
+.property-features strong {
+  color: midnightblue;
+}
+
+.status-message {
+  margin-top: 30px;
+  color: slategray;
+}
+
+.error-message {
+  padding: 15px;
+  border-radius: 8px;
+  background-color: mistyrose;
+  color: darkred;
+}
+
+@media (max-width: 1000px) {
+  .property-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .home-scout {
+    padding: 25px 5%;
+  }
+
+  .property-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .property-image-container {
+    height: 230px;
+  }
+}

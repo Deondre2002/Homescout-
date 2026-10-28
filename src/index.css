@@ -1,0 +1,612 @@
+/* ========================================
+   HOMESCOUT — GLOBAL STYLES
+======================================== */
+
+:root {
+  font-family: Inter, Arial, sans-serif;
+  color: midnightblue;
+  background-color: aliceblue;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* ========================================
+   MAIN APP
+======================================== */
+
+.app {
+  min-height: 100vh;
+  background-color: white;
+}
+
+/* ========================================
+   NAVIGATION
+======================================== */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 22px 7%;
+  background-color: white;
+  border-bottom: 1px solid aliceblue;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: midnightblue;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.logo > span:last-child {
+  color: steelblue;
+}
+
+.logo-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  margin-right: 5px;
+  border-radius: 12px;
+  color: white;
+  background-color: cornflowerblue;
+  font-size: 27px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links a {
+  color: slategray;
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: cornflowerblue;
+}
+
+.nav-button,
+.search-button {
+  padding: 13px 21px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background-color: royalblue;
+  font-weight: 700;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.nav-button:hover,
+.search-button:hover {
+  background-color: mediumblue;
+  transform: translateY(-2px);
+}
+
+/* ========================================
+   HERO SECTION
+======================================== */
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  min-height: 520px;
+  padding: 85px 7%;
+  overflow: hidden;
+  background: linear-gradient(120deg, aliceblue, white 65%, lightcyan);
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 650px;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: steelblue;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  margin: 0 0 22px;
+  color: midnightblue;
+  font-size: clamp(42px, 5vw, 68px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -2px;
+}
+
+.hero h1 span {
+  color: royalblue;
+}
+
+.hero-content > p {
+  max-width: 480px;
+  margin-bottom: 32px;
+  color: slategray;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+/* ========================================
+   SEARCH BAR
+======================================== */
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  max-width: 610px;
+  padding: 12px;
+  border: 1px solid lavender;
+  border-radius: 16px;
+  background-color: white;
+  box-shadow: 0 12px 35px lightsteelblue;
+}
+
+.search-field {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 12px;
+}
+
+.search-field > span {
+  color: midnightblue;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.search-field input {
+  width: 100%;
+  min-width: 0;
+  padding: 4px 0;
+  border: none;
+  outline: none;
+  color: midnightblue;
+  background-color: transparent;
+  font-size: 14px;
+}
+
+.search-field input::placeholder {
+  color: lightslategray;
+}
+
+.search-button {
+  align-self: stretch;
+  white-space: nowrap;
+}
+
+.hero-note {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 25px;
+  color: slategray;
+  font-size: 13px;
+}
+
+.hero-note span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  color: white;
+  background-color: mediumseagreen;
+  font-weight: 800;
+}
+
+/* ========================================
+   HERO DECORATION
+======================================== */
+
+.hero-decoration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 1 320px;
+  min-height: 280px;
+  border: 1px solid white;
+  border-radius: 40px;
+  background: linear-gradient(145deg, lightcyan, powderblue, lavender);
+  box-shadow: 0 25px 65px lightsteelblue;
+}
+
+.floating-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid white;
+  border-radius: 18px;
+  background-color: white;
+  box-shadow: 0 12px 30px lightsteelblue;
+}
+
+.floating-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  color: royalblue;
+  background-color: aliceblue;
+  font-size: 30px;
+}
+
+.floating-card strong {
+  color: midnightblue;
+  font-size: 15px;
+}
+
+.floating-card p {
+  margin-bottom: 0;
+  color: slategray;
+  font-size: 12px;
+}
+
+/* ========================================
+   PROPERTY SECTION
+======================================== */
+
+.properties {
+  padding: 85px 7%;
+  background-color: white;
+}
+
+.section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 35px;
+}
+
+.section-heading h2,
+.about h2 {
+  margin: 0 0 12px;
+  color: midnightblue;
+  font-size: clamp(30px, 4vw, 42px);
+  letter-spacing: -1px;
+}
+
+.section-heading p,
+.about p {
+  margin: 0;
+  color: slategray;
+  line-height: 1.8;
+}
+
+.view-all {
+  color: royalblue;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.view-all:hover {
+  color: mediumblue;
+}
+
+/* ========================================
+   PROPERTY GRID AND CARDS
+======================================== */
+
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+}
+
+.property-card {
+  overflow: hidden;
+  border: 1px solid aliceblue;
+  border-radius: 18px;
+  background-color: white;
+  box-shadow: 0 8px 30px rgba(70, 130, 180, 0.09);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(70, 130, 180, 0.17);
+}
+
+.property-image {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 210px;
+  overflow: hidden;
+  background: linear-gradient(135deg, aliceblue, lightcyan, powderblue);
+}
+
+.property-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.property-placeholder {
+  color: steelblue;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.property-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: midnightblue;
+  background-color: white;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.favorite-button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  color: midnightblue;
+  background-color: white;
+  font-size: 23px;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.favorite-button:hover {
+  color: white;
+  background-color: royalblue;
+}
+
+.property-info {
+  padding: 23px;
+}
+
+.property-info h3 {
+  margin: 0 0 10px;
+  color: midnightblue;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.property-location {
+  margin: 0 0 20px;
+  color: slategray;
+  font-size: 13px;
+}
+
+.property-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 17px 0;
+  border-top: 1px solid aliceblue;
+  border-bottom: 1px solid aliceblue;
+  color: slategray;
+  font-size: 12px;
+}
+
+.property-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 18px;
+}
+
+.property-bottom strong {
+  color: royalblue;
+  font-size: 21px;
+}
+
+.property-bottom > span {
+  color: slategray;
+  font-size: 12px;
+}
+
+/* ========================================
+   ABOUT SECTION
+======================================== */
+
+.about {
+  padding: 85px 7%;
+  text-align: center;
+  background-color: aliceblue;
+}
+
+.about p {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 30px 7%;
+  background-color: white;
+  border-top: 1px solid aliceblue;
+}
+
+.footer p,
+.footer > span {
+  color: slategray;
+  font-size: 12px;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 1000px) {
+  .hero {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+
+  .hero-decoration {
+    flex-basis: 250px;
+  }
+
+  .property-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 18px;
+    padding: 18px 5%;
+  }
+
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .nav-button {
+    padding: 10px 13px;
+    font-size: 12px;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 35px;
+    padding: 55px 5%;
+  }
+
+  .hero-decoration {
+    flex-basis: auto;
+    min-height: 190px;
+  }
+
+  .hero h1 {
+    letter-spacing: -1px;
+  }
+
+  .search-bar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .search-field {
+    padding: 10px;
+  }
+
+  .search-button {
+    padding: 15px;
+  }
+
+  .properties {
+    padding: 60px 5%;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .property-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .property-image {
+    height: 230px;
+  }
+
+  .about {
+    padding: 60px 5%;
+  }
+
+  .footer {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 30px 5%;
+    gap: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
