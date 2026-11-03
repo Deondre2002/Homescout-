@@ -1,37 +1,84 @@
-# HomeScout 🏡
+# 🏡 HomeScout
 
-HomeScout is a real estate search application built with React and Vite. It uses the RentCast API to retrieve rental property listings and display key property details in a clean, modern interface.
+**A nationwide rental property search application built with React and Vite.**
 
-## Features
+HomeScout makes it easier to explore rental properties across the United States. Users can search for rental listings by state and city, browse property details, and load additional results.
 
-- Fetch rental property listings from the RentCast API
-- Display property prices, addresses, bedrooms, bathrooms, and square footage
-- Responsive layout for different screen sizes
-- Clean, modern design with white and icy-blue styling
+## 🚀 Features
 
-## Tech Stack
+- **Nationwide Search:** Explore rental listings across all 50 states.
+- **Location Filtering:** Search for properties by state and city.
+- **Property Listings:** View property information, including address, price, bedrooms, bathrooms, and square footage.
+- **Load More:** Retrieve additional property listings through pagination.
+- **API Integration:** Fetch real rental listing data using the RentCast API.
+- **Responsive Design:** Clean, modern interface with a white and icy-blue color scheme.
+- **Loading & Error States:** Provide feedback while fetching property data and when requests fail.
+
+## 🛠️ Technologies Used
 
 - React
 - JavaScript
-- CSS
 - Vite
-- RentCast API
+- CSS
+- RentCast REST API
+- Git & GitHub
 
-## Getting Started
+## ⚙️ Getting Started
 
-1. Clone the repository.
-2. Install dependencies:
+### 1. Clone the repository
 
-   `npm install`
+```bash
+git clone https://github.com/Deondre2002/Homescout-.git
+```
 
-3. Create a `.env` file in the project root and add your RentCast API key:
+### 2. Navigate to the project
 
-   `VITE_RENTCAST_API_KEY=your_api_key_here`
+```bash
+cd Homescout-app
+```
 
-4. Start the development server:
+### 3. Install dependencies
 
-   `npm run dev`
+```bash
+npm install
+```
 
-## Author
+### 4. Configure your API key
 
-Deondre Johnson
+Create a `.env` file in the project root:
+
+```env
+VITE_RENTCAST_API_KEY=your_api_key_here
+```
+
+Replace `your_api_key_here` with your RentCast API key.
+
+### 5. Start the development server
+
+```bash
+npm run dev
+```
+
+Open the local URL provided by Vite in your browser.
+
+## 🔑 API
+
+HomeScout uses the [RentCast API](https://www.rentcast.io/api) to retrieve rental property listings.
+
+An API key is required to access the rental listing data.
+
+**Security note:** Vite environment variables prefixed with `VITE_` are exposed in the browser bundle. This setup is intended for local development; a production deployment should route API requests through a secure backend.
+
+## 📌 Project Status
+
+HomeScout is actively under development. New features and improvements are being added as the application evolves.
+
+## 👨‍💻 Developer
+
+**Deondre Johnson**
+
+- GitHub: [@Deondre2002](https://github.com/Deondre2002)
+
+---
+
+_Built with React, JavaScript, and a passion for creating useful applications._
