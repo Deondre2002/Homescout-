@@ -71,6 +71,8 @@ function App() {
   const [searchCity, setSearchCity] = useState("");
   const [searchState, setSearchState] = useState("SC");
   const [searchVersion, setSearchVersion] = useState(0);
+  const [minPrice, setMinPrice] = useState("");
+  const [maxPrice, setMaxPrice] = useState("");
 
   const [properties, setProperties] = useState([]);
   const [offset, setOffset] = useState(0);
@@ -164,6 +166,18 @@ function App() {
     }
   }
 
+  const filteredProperties = properties.filter((property) => {
+    const price = property.price;
+
+    if (typeof price !== "number") return false;
+
+    const minimum = minPrice === "" || price >= Number(minPrice);
+
+    const maximum = maxPrice === "" || price <= Number(maxPrice);
+
+    return minimum && maximum;
+  });
+
   const stateName =
     states.find(([code]) => code === searchState)?.[1] || searchState;
 
@@ -231,9 +245,48 @@ function App() {
             No listings found. Try another city or state.
           </p>
         )}
+        <div className="price-filter">
+          <div>
+            <label htmlFor="minPrice">Minimum monthly rent</label>
+            <input
+              id="minPrice"
+              type="number"
+              min="0"
+              step="50"
+              placeholder="no mimimum"
+              value={minPrice}
+              onChange={(event) => setMinPrice(event.target.value)}
+            />
+          </div>
+          <div>
+            <label htmlFor="maxPrice">Maximum monthly rent</label>
+            <input
+              id="maxPrice"
+              type="number"
+              min="0"
+              step="50"
+              placeholder="no maximum"
+              value={maxPrice}
+              onChange={(event) => setMaxPrice(event.target.value)}
+            />
+          </div>
 
+          <button
+            type="button"
+            onClick={() => {
+              setMinPrice("");
+              setMaxPrice("");
+            }}
+          >
+            Clear filters
+          </button>
+        </div>
+
+        <p className="listing-count">
+          {filteredProperties.length} matching homes
+        </p>
         <div className="property-grid">
-          {properties.map((property, index) => (
+          {filteredProperties.map((property, index) => (
             <article
               className="property-card"
               key={property.id ?? `${property.formattedAddress}-${index}`}
