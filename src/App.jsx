@@ -62,6 +62,12 @@ const homePhotos = [
   "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
   "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
   "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde",
+  "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+  "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3",
+  "https://images.unsplash.com/photo-1600585154526-990dced4db0d",
+  "https://images.unsplash.com/photo-1600566752355-35792bedcfea",
+  "https://images.unsplash.com/photo-1600607687644-c7171b42498f",
+  "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3",
 ];
 
 function App() {
